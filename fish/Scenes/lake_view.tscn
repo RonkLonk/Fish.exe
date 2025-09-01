@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvyut8k8pofph"]
+
+[ext_resource type="Texture2D" uid="uid://1gw34yyrt3ig" path="res://Assets/Backgrounds/lake_view.jpg" id="1_c26ij"]
+
+[node name="LakeView" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_c26ij")

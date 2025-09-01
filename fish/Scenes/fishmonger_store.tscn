@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbwdra2gw5xif"]
+
+[ext_resource type="Texture2D" uid="uid://doe63ce8liqxe" path="res://Assets/Backgrounds/fishmonger_store.png" id="1_cndnx"]
+
+[node name="FishmongerStore" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_cndnx")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bibhnyjgx8v7b"]
+
+[ext_resource type="Texture2D" uid="uid://bi8wa3pcejwl1" path="res://Assets/Backgrounds/lakeside_path.png" id="1_s43gj"]
+
+[node name="LakesidePath" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_s43gj")
