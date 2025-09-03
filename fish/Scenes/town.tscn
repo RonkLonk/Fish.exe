@@ -1,15 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8bc0k51tx6yh"]
+[gd_scene load_steps=2 format=3 uid="uid://b8bc0k51tx6yh"]
 
 [ext_resource type="Texture2D" uid="uid://deedrerh7gfsh" path="res://Assets/Backgrounds/town.png" id="1_kswdu"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kswdu"]
-
 [node name="Town" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TownMap" type="TextureRect" parent="."]
 offset_right = 5261.0
 offset_bottom = 3720.0
 texture = ExtResource("1_kswdu")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_kswdu")
