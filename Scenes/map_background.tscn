@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bca2itq37ocwi"]
+
+[ext_resource type="Texture2D" uid="uid://deedrerh7gfsh" path="res://Assets/Backgrounds/town.png" id="1_uslfr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i536r"]
+size = Vector2(221, 242)
+
+[node name="MapBackground" type="Sprite2D"]
+texture = ExtResource("1_uslfr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="FishmongerCollisionBox" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(96, 77)
+rotation = 1.55509
+skew = -0.466003
+shape = SubResource("RectangleShape2D_i536r")

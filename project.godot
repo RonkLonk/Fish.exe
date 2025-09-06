@@ -10,6 +10,11 @@ config_version=5
 
 [application]
 
-config/name="Submarine Wars"
-config/features=PackedStringArray("4.1", "Forward Plus")
+config/name="Fish"
+run/main_scene="uid://b3j31quun5pbs"
+config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
+
+[rendering]
+
+renderer/rendering_method="mobile"

@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=3 uid="uid://b6fa2syfyt86p"]
+
+[ext_resource type="Texture2D" uid="uid://doe63ce8liqxe" path="res://Assets/Backgrounds/fishmonger_store.png" id="1_bejoq"]
+[ext_resource type="Script" uid="uid://bd5c127y7ji7r" path="res://Scenes/texture_rect.gd" id="2_i127b"]
+[ext_resource type="FontFile" uid="uid://cgd2h5yetnl6y" path="res://Assets/Fonts/dogica/OTF/dogicabold.otf" id="3_6at3y"]
+[ext_resource type="Script" uid="uid://dlf6d1ejvtqhk" path="res://Scenes/npc_dialogue.gd" id="4_xkb4t"]
+[ext_resource type="Texture2D" uid="uid://ds8i7q5785byr" path="res://Assets/GUI/UI_Buttons/Complete_UI_Book_Styles_Pack_Free_v1.0/01_TravelBookLite/Spritesheet/UI_TravelBook_SpritesheetInfo01a.png" id="5_pa05a"]
+[ext_resource type="Script" uid="uid://dqyntrlyyr8ie" path="res://Scenes/return_to_town_button.gd" id="6_yk6gg"]
+
+[sub_resource type="Theme" id="Theme_yk6gg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5sj0t"]
+texture = ExtResource("5_pa05a")
+region_rect = Rect2(65, 449, 62, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rt76e"]
+texture = ExtResource("5_pa05a")
+region_rect = Rect2(65, 433, 62, 14)
+
+[node name="VNBackground" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_bejoq")
+expand_mode = 1
+script = ExtResource("2_i127b")
+
+[node name="NPCDialogue" type="Label" parent="."]
+offset_left = 483.0
+offset_top = 181.0
+offset_right = 1053.0
+offset_bottom = 208.0
+theme_override_fonts/font = ExtResource("3_6at3y")
+theme_override_font_sizes/font_size = 30
+text = "HELO I AM FISHMOGER"
+script = ExtResource("4_xkb4t")
+
+[node name="ReturnToTown" type="Button" parent="."]
+offset_left = 21.0
+offset_top = 565.0
+offset_right = 327.0
+offset_bottom = 631.0
+theme = SubResource("Theme_yk6gg")
+theme_override_colors/font_hover_pressed_color = Color(0.41642, 0.888563, 3.85046e-07, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_6at3y")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5sj0t")
+theme_override_styles/normal = SubResource("StyleBoxTexture_rt76e")
+text = "RETURN TO TOWN"
+script = ExtResource("6_yk6gg")
