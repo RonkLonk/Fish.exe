@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b6fa2syfyt86p" path="res://Scenes/vn_background.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://dmrooawb7q4nd" path="res://Scenes/player.tscn" id="2_8gbba"]
-[ext_resource type="Script" uid="uid://c0t7dtixmeut2" path="res://Scenes/camera_2d.gd" id="3_kry3j"]
+[ext_resource type="Script" uid="uid://c0t7dtixmeut2" path="res://Scripts/camera_2d.gd" id="3_kry3j"]
 [ext_resource type="PackedScene" uid="uid://bca2itq37ocwi" path="res://Scenes/map_background.tscn" id="4_jjvhh"]
 [ext_resource type="AudioStream" uid="uid://4xju1a3tupp" path="res://Assets/Music/Crazy Atmosphere v2.wav" id="4_kry3j"]
 
@@ -10,23 +10,33 @@
 
 [node name="VNBackground" parent="." instance=ExtResource("1_bo1nx")]
 
+[node name="NPCDialogue" parent="VNBackground" index="2"]
+anchor_left = 0.045
+anchor_top = 0.761
+anchor_right = 0.045
+anchor_bottom = 0.784
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 570.0
+offset_bottom = 27.0
+
 [node name="MapBackground" parent="." instance=ExtResource("4_jjvhh")]
-scale = Vector2(0.239999, 0.239999)
+scale = Vector2(1.52683, 1.52683)
 
 [node name="Player" parent="." instance=ExtResource("2_8gbba")]
 top_level = true
 position = Vector2(-19, 109)
-scale = Vector2(1.5, 1.5)
+scale = Vector2(2, 2)
 motion_mode = 1
-speed = 200
+speed = 225
 spawn_x = 100
 spawn_y = 100
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-limit_left = -600
-limit_top = -450
-limit_right = 600
-limit_bottom = 450
+limit_left = -800
+limit_top = -800
+limit_right = 800
+limit_bottom = 800
 limit_smoothed = true
 script = ExtResource("3_kry3j")
 
@@ -35,11 +45,19 @@ stream = ExtResource("4_kry3j")
 autoplay = true
 
 [connection signal="pressed" from="VNBackground/ReturnToTown" to="VNBackground/TextureRect" method="_on_return_to_town_pressed"]
+[connection signal="pressed" from="VNBackground/ReturnToTown" to="VNBackground/SpeechBubble" method="_on_return_to_town_pressed"]
 [connection signal="pressed" from="VNBackground/ReturnToTown" to="VNBackground/NPCDialogue" method="_on_return_to_town_pressed"]
 [connection signal="pressed" from="VNBackground/ReturnToTown" to="VNBackground/ReturnToTown" method="_on_pressed"]
-[connection signal="body_entered" from="MapBackground/Area2D" to="VNBackground/TextureRect" method="_on_fishmonger_store_entered"]
-[connection signal="body_entered" from="MapBackground/Area2D" to="VNBackground/NPCDialogue" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="MapBackground/Area2D" to="VNBackground/ReturnToTown" method="_on_fishmonger_shop_entered"]
+[connection signal="pressed" from="VNBackground/ReturnToTown" to="VNBackground/Portrait" method="_on_return_to_town_pressed"]
+[connection signal="body_entered" from="MapBackground/AnglersArcanaBuilding/AnglersArcanaArea2D" to="VNBackground/TextureRect" method="_on_anglers_arcana_area_2d_body_entered"]
+[connection signal="body_entered" from="MapBackground/AnglersArcanaBuilding/AnglersArcanaArea2D" to="VNBackground/SpeechBubble" method="_on_anglers_arcana_area_2d_body_entered"]
+[connection signal="body_entered" from="MapBackground/AnglersArcanaBuilding/AnglersArcanaArea2D" to="VNBackground/NPCDialogue" method="_on_anglers_arcana_area_2d_body_entered"]
+[connection signal="body_entered" from="MapBackground/AnglersArcanaBuilding/AnglersArcanaArea2D" to="VNBackground/ReturnToTown" method="_on_anglers_arcana_area_2d_body_entered"]
+[connection signal="body_entered" from="MapBackground/AnglersArcanaBuilding/AnglersArcanaArea2D" to="VNBackground/Portrait" method="_on_anglers_arcana_area_2d_body_entered"]
+[connection signal="body_entered" from="MapBackground/FishmongerArea2D" to="VNBackground/TextureRect" method="_on_fishmonger_area_2d_body_entered"]
+[connection signal="body_entered" from="MapBackground/FishmongerArea2D" to="VNBackground/SpeechBubble" method="_on_fishmonger_area_2d_body_entered"]
+[connection signal="body_entered" from="MapBackground/FishmongerArea2D" to="VNBackground/NPCDialogue" method="_on_fishmonger_area_2d_body_entered"]
+[connection signal="body_entered" from="MapBackground/FishmongerArea2D" to="VNBackground/ReturnToTown" method="_on_fishmonger_area_2d_body_entered"]
 
 [editable path="VNBackground"]
 [editable path="MapBackground"]

@@ -1,19 +1,34 @@
-[gd_scene load_steps=3 format=3 uid="uid://bca2itq37ocwi"]
+[gd_scene load_steps=5 format=3 uid="uid://bca2itq37ocwi"]
 
-[ext_resource type="Texture2D" uid="uid://deedrerh7gfsh" path="res://Assets/Backgrounds/town.png" id="1_uslfr"]
+[ext_resource type="Texture2D" uid="uid://uvk2i44y75nr" path="res://Assets/Backgrounds/fishing-village-map-background.png" id="1_uslfr"]
+[ext_resource type="Texture2D" uid="uid://dr65lfooojdd1" path="res://Assets/StaticSprites/Fishing House 2.png" id="2_i536r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a4nih"]
+size = Vector2(77.5652, 120.873)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i536r"]
-size = Vector2(221, 242)
+size = Vector2(63.0154, 62.1963)
 
 [node name="MapBackground" type="Sprite2D"]
 texture = ExtResource("1_uslfr")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="AnglersArcanaBuilding" type="Sprite2D" parent="."]
+position = Vector2(395, -310)
+rotation = 0.340339
+scale = Vector2(0.771564, 0.709834)
+skew = -0.253073
+texture = ExtResource("2_i536r")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="AnglersArcanaArea2D" type="Area2D" parent="AnglersArcanaBuilding"]
 
-[node name="FishmongerCollisionBox" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(96, 77)
+[node name="AnglersArcanaCollisionBox" type="CollisionShape2D" parent="AnglersArcanaBuilding/AnglersArcanaArea2D"]
+position = Vector2(-43.2603, 121.818)
+shape = SubResource("RectangleShape2D_a4nih")
+
+[node name="FishmongerArea2D" type="Area2D" parent="."]
+
+[node name="FishmongerCollisionBox" type="CollisionShape2D" parent="FishmongerArea2D"]
+position = Vector2(-308, -108)
 rotation = 1.55509
 skew = -0.466003
 shape = SubResource("RectangleShape2D_i536r")

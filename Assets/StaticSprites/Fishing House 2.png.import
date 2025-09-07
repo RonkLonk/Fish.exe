@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1xholvbmwy1g"
-path="res://.godot/imported/generic_house.png-594e2e39ac575f52dfbd7327edbff82a.ctex"
+uid="uid://dr65lfooojdd1"
+path="res://.godot/imported/Fishing House 2.png-9d8ffcffa4682e39a0a35e7122c725b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/StaticSprites/generic_house.png"
-dest_files=["res://.godot/imported/generic_house.png-594e2e39ac575f52dfbd7327edbff82a.ctex"]
+source_file="res://Assets/StaticSprites/Fishing House 2.png"
+dest_files=["res://.godot/imported/Fishing House 2.png-9d8ffcffa4682e39a0a35e7122c725b4.ctex"]
 
 [params]
 
