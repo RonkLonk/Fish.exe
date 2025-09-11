@@ -1,0 +1,82 @@
+[gd_scene load_steps=14 format=3 uid="uid://b6fa2syfyt86p"]
+
+[ext_resource type="Texture2D" uid="uid://doe63ce8liqxe" path="res://Assets/Backgrounds/fishmonger_store.png" id="1_bejoq"]
+[ext_resource type="Script" uid="uid://bd5c127y7ji7r" path="res://Scripts/texture_rect.gd" id="2_i127b"]
+[ext_resource type="Texture2D" uid="uid://cxj80bbfgkew4" path="res://Assets/GUI/UI_Buttons/Complete_UI_Book_Styles_Pack_Free_v1.0/01_TravelBookLite/Sprites/UI_TravelBook_BookCover01a.png" id="3_5sj0t"]
+[ext_resource type="FontFile" uid="uid://cgd2h5yetnl6y" path="res://Assets/Fonts/dogica/OTF/dogicabold.otf" id="3_6at3y"]
+[ext_resource type="Script" uid="uid://d1l6b8t3blxsu" path="res://Scripts/speech_bubble.gd" id="4_rt76e"]
+[ext_resource type="Script" uid="uid://dlf6d1ejvtqhk" path="res://Scripts/npc_dialogue.gd" id="4_xkb4t"]
+[ext_resource type="Texture2D" uid="uid://ds8i7q5785byr" path="res://Assets/GUI/UI_Buttons/Complete_UI_Book_Styles_Pack_Free_v1.0/01_TravelBookLite/Spritesheet/UI_TravelBook_SpritesheetInfo01a.png" id="5_pa05a"]
+[ext_resource type="Script" uid="uid://dqyntrlyyr8ie" path="res://Scripts/return_to_town_button.gd" id="6_yk6gg"]
+[ext_resource type="Texture2D" uid="uid://c0ngu70je0mn0" path="res://Assets/StaticSprites/btgg.png" id="9_tf5y1"]
+[ext_resource type="Script" uid="uid://dclp60gm2lgoq" path="res://Scenes/portrait.gd" id="10_p7v67"]
+
+[sub_resource type="Theme" id="Theme_yk6gg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5sj0t"]
+texture = ExtResource("5_pa05a")
+region_rect = Rect2(65, 449, 62, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rt76e"]
+texture = ExtResource("5_pa05a")
+region_rect = Rect2(65, 433, 62, 14)
+
+[node name="VNBackground" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_bejoq")
+expand_mode = 1
+script = ExtResource("2_i127b")
+
+[node name="SpeechBubble" type="TextureRect" parent="."]
+self_modulate = Color(0, 1, 1, 0.647059)
+offset_left = 32.0
+offset_top = 475.0
+offset_right = 1100.0
+offset_bottom = 635.0
+texture = ExtResource("3_5sj0t")
+script = ExtResource("4_rt76e")
+
+[node name="NPCDialogue" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.054
+anchor_top = 0.769
+anchor_right = 0.077
+anchor_bottom = 0.769
+offset_left = -0.208
+offset_top = -0.312042
+offset_right = 1006.79
+offset_bottom = 116.688
+scale = Vector2(0.96, 1)
+theme_override_fonts/font = ExtResource("3_6at3y")
+theme_override_font_sizes/font_size = 30
+text = "HELO I AM FISHMOGER"
+autowrap_mode = 2
+script = ExtResource("4_xkb4t")
+metadata/_edit_use_anchors_ = true
+
+[node name="ReturnToTown" type="Button" parent="."]
+offset_left = 37.0
+offset_top = 28.0
+offset_right = 343.0
+offset_bottom = 94.0
+theme = SubResource("Theme_yk6gg")
+theme_override_colors/font_hover_pressed_color = Color(0.41642, 0.888563, 3.85046e-07, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_6at3y")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5sj0t")
+theme_override_styles/normal = SubResource("StyleBoxTexture_rt76e")
+text = "RETURN TO TOWN"
+script = ExtResource("6_yk6gg")
+
+[node name="Portrait" type="Sprite2D" parent="."]
+position = Vector2(893, 331)
+scale = Vector2(0.308355, 0.308355)
+texture = ExtResource("9_tf5y1")
+script = ExtResource("10_p7v67")
