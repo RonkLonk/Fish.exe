@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ds8i7q5785byr" path="res://Assets/GUI/UI_Buttons/Complete_UI_Book_Styles_Pack_Free_v1.0/01_TravelBookLite/Spritesheet/UI_TravelBook_SpritesheetInfo01a.png" id="5_pa05a"]
 [ext_resource type="Script" uid="uid://dqyntrlyyr8ie" path="res://Scripts/return_to_town_button.gd" id="6_yk6gg"]
 [ext_resource type="Texture2D" uid="uid://c0ngu70je0mn0" path="res://Assets/StaticSprites/btgg.png" id="9_tf5y1"]
-[ext_resource type="Script" uid="uid://dclp60gm2lgoq" path="res://Scenes/portrait.gd" id="10_p7v67"]
+[ext_resource type="Script" uid="uid://dclp60gm2lgoq" path="res://Scripts/portrait.gd" id="10_p7v67"]
 
 [sub_resource type="Theme" id="Theme_yk6gg"]
 

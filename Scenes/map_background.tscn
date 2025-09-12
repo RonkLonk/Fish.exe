@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bca2itq37ocwi"]
+[gd_scene load_steps=6 format=3 uid="uid://bca2itq37ocwi"]
 
 [ext_resource type="Texture2D" uid="uid://uvk2i44y75nr" path="res://Assets/Backgrounds/fishing-village-map-background.png" id="1_uslfr"]
 [ext_resource type="Texture2D" uid="uid://dr65lfooojdd1" path="res://Assets/StaticSprites/Fishing House 2.png" id="2_i536r"]
@@ -8,6 +8,9 @@ size = Vector2(77.5652, 120.873)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i536r"]
 size = Vector2(63.0154, 62.1963)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i536r"]
+radius = 47.0
 
 [node name="MapBackground" type="Sprite2D"]
 texture = ExtResource("1_uslfr")
@@ -32,3 +35,9 @@ position = Vector2(-308, -108)
 rotation = 1.55509
 skew = -0.466003
 shape = SubResource("RectangleShape2D_i536r")
+
+[node name="DiveSiteArea2D" type="Area2D" parent="."]
+
+[node name="DiveSiteCollisionBox" type="CollisionShape2D" parent="DiveSiteArea2D"]
+position = Vector2(58, 152)
+shape = SubResource("CircleShape2D_i536r")

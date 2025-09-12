@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://djomdfwtm55ym"]
+
+[ext_resource type="Texture2D" uid="uid://bv525q6ryd28p" path="res://Assets/Animations/Player/Diving assets + fishes1.png" id="1_55sxq"]
+[ext_resource type="Script" uid="uid://duf7fuj8c0pbs" path="res://Scenes/spear_gun.gd" id="2_p1i0j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1i0j"]
+atlas = ExtResource("1_55sxq")
+region = Rect2(0, 50, 35, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3aw0b"]
+atlas = ExtResource("1_55sxq")
+region = Rect2(0, 40, 35, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bosjf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p1i0j")
+}],
+"loop": true,
+"name": &"speargun_fired",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3aw0b")
+}],
+"loop": true,
+"name": &"speargun_loaded",
+"speed": 5.0
+}]
+
+[node name="SpearGun" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_bosjf")
+animation = &"speargun_loaded"
+centered = false
+offset = Vector2(-8.5, -2)
+script = ExtResource("2_p1i0j")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1gw34yyrt3ig"
-path="res://.godot/imported/lake_view.jpg-34b9109500c32a7cd16b92ac96077891.ctex"
+uid="uid://bv525q6ryd28p"
+path="res://.godot/imported/Diving assets + fishes1.png-bd7c7d4cba15af676b8bd3e664a31c17.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Backgrounds/lake_view.jpg"
-dest_files=["res://.godot/imported/lake_view.jpg-34b9109500c32a7cd16b92ac96077891.ctex"]
+source_file="res://Assets/Animations/Player/Diving assets + fishes1.png"
+dest_files=["res://.godot/imported/Diving assets + fishes1.png-bd7c7d4cba15af676b8bd3e664a31c17.ctex"]
 
 [params]
 

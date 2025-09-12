@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpixxt0um448u"]
+
+[ext_resource type="Texture2D" uid="uid://certdrbdw3o1q" path="res://Assets/Backgrounds/diving-background.png" id="1_vga1m"]
+[ext_resource type="PackedScene" uid="uid://rcfrk7m352sp" path="res://Scenes/diving_player.tscn" id="2_yfl1i"]
+
+[node name="DivingGame" type="Node2D"]
+
+[node name="OceanMap" type="Sprite2D" parent="."]
+scale = Vector2(0.709259, 0.709259)
+texture = ExtResource("1_vga1m")
+
+[node name="DivingPlayer" parent="." instance=ExtResource("2_yfl1i")]
+speed = 75
+spawn_x = 0
+spawn_y = -300
+
+[node name="Camera2D" type="Camera2D" parent="DivingPlayer"]
+zoom = Vector2(2.5, 2.5)
+limit_left = -650
+limit_top = -350
+limit_right = 650
+limit_bottom = 350
+limit_smoothed = true

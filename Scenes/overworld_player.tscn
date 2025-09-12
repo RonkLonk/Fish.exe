@@ -1,71 +1,71 @@
 [gd_scene load_steps=22 format=3 uid="uid://dmrooawb7q4nd"]
 
-[ext_resource type="Script" uid="uid://c03vn7f2b4a44" path="res://Scripts/player_movement.gd" id="1_6t5aa"]
-[ext_resource type="Texture2D" uid="uid://c2gmii1lxy4q1" path="res://Assets/FishermanAssetPack/1 Fisherman/Fisherman_idle.png" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://cuiq174mqygko" path="res://Assets/Animations/Player/The-Fisherman.png" id="3_6t5aa"]
+[ext_resource type="Script" uid="uid://c03vn7f2b4a44" path="res://Scripts/overworld_player.gd" id="1_c8xp0"]
+[ext_resource type="Texture2D" uid="uid://c2gmii1lxy4q1" path="res://Assets/FishermanAssetPack/1 Fisherman/Fisherman_idle.png" id="2_7ny5g"]
+[ext_resource type="Texture2D" uid="uid://cuiq174mqygko" path="res://Assets/Animations/Player/The-Fisherman.png" id="3_7gkiw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
-atlas = ExtResource("1_cvnsp")
+atlas = ExtResource("2_7ny5g")
 region = Rect2(0, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
-atlas = ExtResource("1_cvnsp")
+atlas = ExtResource("2_7ny5g")
 region = Rect2(48, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x3wgy"]
-atlas = ExtResource("1_cvnsp")
+atlas = ExtResource("2_7ny5g")
 region = Rect2(96, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3smsa"]
-atlas = ExtResource("1_cvnsp")
+atlas = ExtResource("2_7ny5g")
 region = Rect2(144, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8erm5"]
-atlas = ExtResource("3_6t5aa")
+atlas = ExtResource("3_7gkiw")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f1ek2"]
-atlas = ExtResource("3_6t5aa")
+atlas = ExtResource("3_7gkiw")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tx1dd"]
-atlas = ExtResource("3_6t5aa")
+atlas = ExtResource("3_7gkiw")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gymyn"]
-atlas = ExtResource("3_6t5aa")
+atlas = ExtResource("3_7gkiw")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pu2lt"]
-atlas = ExtResource("3_6t5aa")
+atlas = ExtResource("3_7gkiw")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ukyrk"]
-atlas = ExtResource("3_6t5aa")
+atlas = ExtResource("3_7gkiw")
 region = Rect2(64, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7dp3o"]
-atlas = ExtResource("3_6t5aa")
+atlas = ExtResource("3_7gkiw")
 region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h4iuc"]
-atlas = ExtResource("3_6t5aa")
+atlas = ExtResource("3_7gkiw")
 region = Rect2(32, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fd4e3"]
-atlas = ExtResource("3_6t5aa")
+atlas = ExtResource("3_7gkiw")
 region = Rect2(64, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qqcod"]
-atlas = ExtResource("3_6t5aa")
+atlas = ExtResource("3_7gkiw")
 region = Rect2(0, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_igrcy"]
-atlas = ExtResource("3_6t5aa")
+atlas = ExtResource("3_7gkiw")
 region = Rect2(32, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fs7ks"]
-atlas = ExtResource("3_6t5aa")
+atlas = ExtResource("3_7gkiw")
 region = Rect2(64, 96, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7dp3o"]
@@ -148,12 +148,12 @@ animations = [{
 radius = 5.0
 height = 28.0
 
-[node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_6t5aa")
+[node name="OverworldPlayer" type="CharacterBody2D"]
+script = ExtResource("1_c8xp0")
 
-[node name="PlayerAnimation" type="AnimatedSprite2D" parent="."]
+[node name="OverworldPlayerAnimation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7dp3o")
-animation = &"player_walk_down"
+animation = &"player_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 9)

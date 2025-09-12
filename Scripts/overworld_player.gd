@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var spawn_x = 350
 @export var spawn_y	= 350
 @onready var camera = $Camera2D
-@onready var _animated_sprite = $PlayerAnimation
+@onready var _animated_sprite = $OverworldPlayerAnimation
 @onready var _can_move
 
 func _ready():

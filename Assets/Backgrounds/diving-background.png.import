@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi8wa3pcejwl1"
-path="res://.godot/imported/lakeside_path.png-6975606787fc08448a67b759b2c88ee6.ctex"
+uid="uid://certdrbdw3o1q"
+path="res://.godot/imported/diving-background.png-030108b1aa43abcddea4862ea85d85ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Backgrounds/lakeside_path.png"
-dest_files=["res://.godot/imported/lakeside_path.png-6975606787fc08448a67b759b2c88ee6.ctex"]
+source_file="res://Assets/Backgrounds/diving-background.png"
+dest_files=["res://.godot/imported/diving-background.png-030108b1aa43abcddea4862ea85d85ad.ctex"]
 
 [params]
 
