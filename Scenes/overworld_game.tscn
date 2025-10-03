@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3j31quun5pbs"]
+[gd_scene load_steps=7 format=3 uid="uid://sscbjyy21fp"]
 
 [ext_resource type="PackedScene" uid="uid://b6fa2syfyt86p" path="res://Scenes/vn_background.tscn" id="1_m6u1q"]
 [ext_resource type="PackedScene" uid="uid://bca2itq37ocwi" path="res://Scenes/map_background.tscn" id="2_a2p3m"]

@@ -11,10 +11,6 @@ config_version=5
 [application]
 
 config/name="Fish"
-run/main_scene="uid://bao1vug2tphph"
-config/features=PackedStringArray("4.4", "Mobile")
+run/main_scene="uid://dpixxt0um448u"
+config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
-
-[rendering]
-
-renderer/rendering_method="mobile"
