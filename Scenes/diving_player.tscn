@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://rcfrk7m352sp"]
+[gd_scene load_steps=12 format=3 uid="uid://rcfrk7m352sp"]
 
 [ext_resource type="Script" uid="uid://c4383jnxfq6aa" path="res://Scripts/diving_player.gd" id="1_2luhv"]
 [ext_resource type="Texture2D" uid="uid://bv525q6ryd28p" path="res://Assets/Animations/Player/Diving assets + fishes1.png" id="2_3l0ii"]
 [ext_resource type="PackedScene" uid="uid://djomdfwtm55ym" path="res://Scenes/spear_gun.tscn" id="3_3l0ii"]
+[ext_resource type="Texture2D" uid="uid://b2a6nxord1xtl" path="res://Assets/LightTextures/TorchLightTexture.png" id="4_sgerp"]
+[ext_resource type="Texture2D" uid="uid://bo64xeevn0olw" path="res://Assets/LightTextures/DiveLight.png" id="5_jlvbj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jlvbj"]
 atlas = ExtResource("2_3l0ii")
@@ -47,6 +49,12 @@ height = 20.0
 [node name="DivingPlayer" type="CharacterBody2D"]
 script = ExtResource("1_2luhv")
 
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, 14)
+scale = Vector2(0.19999947, 0.19999947)
+shadow_enabled = true
+texture = ExtResource("5_jlvbj")
+
 [node name="DivingPlayerAnimation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8yeph")
 animation = &"player_swim"
@@ -56,3 +64,10 @@ shape = SubResource("CapsuleShape2D_sgerp")
 
 [node name="SpearGun" parent="." instance=ExtResource("3_3l0ii")]
 position = Vector2(5, -1)
+
+[node name="TorchPointLight2D" type="PointLight2D" parent="SpearGun"]
+position = Vector2(99.00001, 4)
+rotation = -1.571074
+scale = Vector2(2.2800317, 2.2399974)
+texture = ExtResource("4_sgerp")
+texture_scale = 0.1
