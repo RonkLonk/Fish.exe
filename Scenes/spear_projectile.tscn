@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5mfw7am2x4bl"]
+
+[ext_resource type="Script" uid="uid://davys0psjunxy" path="res://spear_projectile.gd" id="1_4pggk"]
+[ext_resource type="Texture2D" uid="uid://bv525q6ryd28p" path="res://Assets/Animations/Player/Diving assets + fishes1.png" id="2_wci7m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4pggk"]
+radius = 0.7261411
+height = 12.0
+
+[node name="SpearProjectile" type="Node2D"]
+top_level = true
+position = Vector2(7, 0)
+script = ExtResource("1_4pggk")
+speed = 600
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 0)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_wci7m")
+region_enabled = true
+region_rect = Rect2(11, 65, 14, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
+position = Vector2(1.9999995, 0)
+rotation = 1.5707706
+scale = Vector2(2.168058, 1)
+shape = SubResource("CapsuleShape2D_4pggk")

@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpixxt0um448u"]
+[gd_scene load_steps=5 format=3 uid="uid://dpixxt0um448u"]
 
 [ext_resource type="Texture2D" uid="uid://certdrbdw3o1q" path="res://Assets/Backgrounds/diving-background.png" id="1_vga1m"]
+[ext_resource type="Script" uid="uid://cc2kfosolq42g" path="res://Scenes/diving_game.gd" id="1_wwhow"]
 [ext_resource type="PackedScene" uid="uid://rcfrk7m352sp" path="res://Scenes/diving_player.tscn" id="2_yfl1i"]
 [ext_resource type="Texture2D" uid="uid://b5bbviq2i6d5" path="res://Assets/LightTextures/SunlightTexture.png" id="3_crfts"]
 
 [node name="DivingGame" type="Node2D"]
+script = ExtResource("1_wwhow")
 
 [node name="OceanMap" type="Sprite2D" parent="."]
 scale = Vector2(0.709259, 0.709259)

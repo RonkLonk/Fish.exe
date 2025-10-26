@@ -4,11 +4,13 @@ extends CharacterBody2D
 @export var buoyancy_acceleration = 1
 @export var spawn_x = 350
 @export var spawn_y	= 350
+
 @onready var camera = $Camera2D
 @onready var _animated_sprite = $DivingPlayerAnimation
 @onready var _can_move
 @onready var buoyancy
 @onready var max_buoyancy
+@onready var SPEAR = preload("res://Scenes/spear_projectile.tscn")
 
 
 func _ready():
